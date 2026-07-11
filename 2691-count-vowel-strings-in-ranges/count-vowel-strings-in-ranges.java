@@ -31,10 +31,7 @@ class Solution {
         for(int i=0;i<queries.length;i++){
             int startidx = queries[i][0];
             int endidx = queries[i][1];
-            if(startidx==endidx && endidx!=0){
-                ans[i] = vowel[endidx] - vowel[endidx-1];
-                continue;
-            }
+            
             if(startidx==0){
                 ans[i] = vowel[endidx];
             }else{
