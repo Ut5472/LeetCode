@@ -26,13 +26,10 @@ class Solution {
             for(int j=text2.length()-1;j>=0;j--){
                 int ans = 0;
                 int ans1 = 0;
-                int ans2 = 0;
                 if(text1.charAt(i)==text2.charAt(j)){
                     ans = 1 + prev[j+1];
                 }else{
-                    ans1 = curr[j+1];
-                    ans2 = prev[j];
-                    ans1 = Math.max(ans1,ans2);
+                    ans1 = Math.max(curr[j+1],prev[j]);
                 }
                 curr[j] = Math.max(ans,ans1);
             }
