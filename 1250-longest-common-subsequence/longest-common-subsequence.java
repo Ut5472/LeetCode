@@ -24,14 +24,13 @@ class Solution {
         int[] curr = new int[text2.length()+1];
         for(int i=text1.length()-1;i>=0;i--){
             for(int j=text2.length()-1;j>=0;j--){
-                int ans = 0;
-                int ans1 = 0;
+               
                 if(text1.charAt(i)==text2.charAt(j)){
-                    ans = 1 + prev[j+1];
+                    curr[j] = 1 + prev[j+1];
                 }else{
-                    ans1 = Math.max(curr[j+1],prev[j]);
+                    curr[j] = Math.max(curr[j+1],prev[j]);
                 }
-                curr[j] = Math.max(ans,ans1);
+                //curr[j] = Math.max(ans,ans1);
             }
             prev = curr;
             if(i>0){
