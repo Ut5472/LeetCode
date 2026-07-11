@@ -47,7 +47,7 @@ class Solution {
         for(int[] row:dp){
             Arrays.fill(row,-1);
         }
-        //return solve(text1,text2,0,0,dp);
-        return tabulation(text1,text2);
+        return solve(text1,text2,0,0,dp);
+        //return tabulation(text1,text2);
     }
 }
