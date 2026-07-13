@@ -30,10 +30,7 @@ class Solution {
             for(int j=i+1;j<n;j++){
                 int min = Integer.MAX_VALUE;
                 for(int part = i;part<j;part++){
-                    int ans = dp[i][part];
-                    int ans2 = dp[part+1][j];
-                    int temp = matrix[i][part]*matrix[part+1][j] + ans + ans2;
-                    min = Math.min(temp,min);
+                    min = Math.min(((matrix[i][part]*matrix[part+1][j])+dp[i][part]+dp[part+1][j]),min);
                 }
                 dp[i][j] = min;
             }
