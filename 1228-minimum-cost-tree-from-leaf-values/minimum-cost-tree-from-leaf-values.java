@@ -14,10 +14,10 @@ class Solution {
             int ans2 = solver(arr,matrix,part+1,j,dp);
             int temp = matrix[i][part] * matrix[part+1][j] + ans + ans2;
             min = Math.min(temp,min);      
-            System.out.println(temp);
-            System.out.println(ans);
-            System.out.println(ans2);
-            System.out.println("\n");      
+            //System.out.println(temp);
+            //System.out.println(ans);
+            //System.out.println(ans2);
+            //System.out.println("\n");      
         }
         dp[i][j] = min;
         return min;
