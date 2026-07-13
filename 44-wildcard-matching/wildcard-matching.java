@@ -44,7 +44,7 @@ class Solution {
             dp[i][j] = matcher(s,p,i+1,j+1,dp,vis);
             return dp[i][j];//matcher(s,p,i+1,j+1);
         }else if(p.charAt(j) == '*'){
-            dp[i][j] = matcher(s,p,i+1,j,dp,vis) || matcher(s,p,i,j+1,dp,vis) || matcher(s,p,i+1,j+1,dp,vis);
+            dp[i][j] = matcher(s,p,i+1,j,dp,vis) || matcher(s,p,i,j+1,dp,vis) ;
             return dp[i][j]; //matcher(s,p,i+1,j) || matcher(s,p,i,j+1) || matcher(s,p,i+1,j+1);
         }else{
             return false;
