@@ -10,10 +10,8 @@ class Solution {
         //recursion
         int min = Integer.MAX_VALUE;
         for(int part=i;part<j;part++){
-            int ans =  solver(arr,matrix,i,part,dp);
-            int ans2 = solver(arr,matrix,part+1,j,dp);
-            int temp = matrix[i][part] * matrix[part+1][j] + ans + ans2;
-            min = Math.min(temp,min);      
+           
+            min = Math.min(((matrix[i][part] * matrix[part+1][j])+solver(arr,matrix,part+1,j,dp)+solver(arr,matrix,i,part,dp)),min);      
             //System.out.println(temp);
             //System.out.println(ans);
             //System.out.println(ans2);
