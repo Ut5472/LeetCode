@@ -52,7 +52,7 @@ class Solution {
                 matrix[i][j] = Math.max(matrix[i][j-1],arr[j]); 
             }
         }
-        return tabulation(arr,matrix);
-        //return solver(arr,matrix,0,n-1,dp);
+        //return tabulation(arr,matrix);
+        return solver(arr,matrix,0,n-1,dp);
     }
 }
