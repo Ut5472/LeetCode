@@ -1,7 +1,11 @@
 class Solution {
     private int minVal(int[] stones,int i,int sum,int[][] dp,int totalSum){
         if(i==stones.length){
-            return Math.abs(sum);
+            if(sum>=0){
+                return sum;
+            }else{
+                return Integer.MAX_VALUE;
+            }
         }
         if(dp[i][totalSum+sum]!=-1){
             return dp[i][totalSum+sum];
