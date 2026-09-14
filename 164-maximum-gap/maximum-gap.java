@@ -6,7 +6,7 @@ class Solution {
         Arrays.sort(nums);
         int max_diff = Integer.MIN_VALUE;
         for(int i=0;i<nums.length-1;i++){
-            max_diff = Math.max(max_diff,Math.abs(nums[i]-nums[i+1]));
+            max_diff = Math.max(max_diff,(nums[i+1]-nums[i]));
         }
         return max_diff;
     }
